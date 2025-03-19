@@ -1,0 +1,60 @@
+CONFIGS FAÇA ANTES DE TUDO:
+
+Package.json:
+{
+
+  "homepage": "https://TheSamuelDopke.github.io/seurepositório",
+
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+
+vite.config.js:
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: "/seurepositório/",
+});
+
+main.jsx:
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App></App>,
+    },
+    {
+      path: "/task",
+      element: <TaskPage></TaskPage>,
+    },
+  ],
+  ------->{ basename: "/DoTaskNow/" } //Adicionar isso aqui.
+);
+
+
+
+Fazendo para o GithubPages:
+git init - Inicializar o git na pasta do projeto
+git add . - Adicionar todos os arquivos do projeto
+git commit -m "Mensagem do commit" - Commitando tudo(necessário para o deploy)
+git branch -M main - Definindo a branch principal!
+git remote add origin https://github.com/TheSamuelDopke/projectasks.git
+Acima adiciona a url do projeto
+git push -u origin main - Enviar as modificações pro origin
+
+npm i gh-pages@6.1.0 --save-dev
+
+Passos no package.json e no vite.config.js
+
+git commit -a -m "Alterações"
+git push - Mandar para o github
+
+npm run deploy
+
+
+

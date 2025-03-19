@@ -10,7 +10,6 @@ DoTaskNow is a task management application built with React and Vite, designed t
 * **Task Filtering:** Filter tasks by priority and due date to focus on what's important.
 * **Task Completion:** Mark tasks as completed to track your progress.
 * **Task Details:** View detailed information about each task.
-* **Responsive Design:** Works seamlessly on various devices.
 
 ## Technologies Used
 
